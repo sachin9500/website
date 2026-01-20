@@ -29,7 +29,7 @@ function toggleMenu() {
   </div>
 
   <!-- Hamburger -->
-  <div class="menu-btn" onclick="toggleMenu()">
+  <div class="menu-btn">
     <span></span>
     <span></span>
     <span></span>
@@ -95,12 +95,13 @@ function toggleMenu() {
 <!-- JS -->
 <script>
   const menuBtn = document.querySelector('.menu-btn');
-  const menu = document.querySelector('.menu');
+  const menu = document.getElementById('mobileMenu');
 
   menuBtn.addEventListener('click', () => {
     menu.classList.toggle('open');
   });
 </script>
+
 
 </body>
 </html>

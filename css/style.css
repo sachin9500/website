@@ -103,7 +103,7 @@ body {
 .content p {
   font-weight: 600;
   line-height: 1.6;
-  margin-top: 18px;
+  margin-top: 25px;
 }
 
 /* ---------- CAREERS ---------- */
@@ -318,15 +318,36 @@ footer a:hover {
 
 /* ---------- MOBILE ONLY ---------- */
 @media (max-width: 768px) {
+
   .nav-links {
-    display: none;           /* hide desktop links */
+    display: none; /* hide desktop links */
   }
 
   .menu-btn {
-    display: flex;           /* show hamburger */
+    display: flex; /* show hamburger */
+    cursor: pointer;
   }
 
-  .mobile-menu.show {
-    display: flex;           /* open menu */
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #000;
+    border: 1px solid #fff;
+    padding: 14px 18px;
+    gap: 12px;
+    z-index: 1000;
+  }
+
+  .mobile-menu.open {
+    display: flex; /* 🔑 THIS WAS MISSING */
+  }
+
+  .mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
   }
 }
