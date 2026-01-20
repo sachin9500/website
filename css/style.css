@@ -134,10 +134,14 @@ footer {
 }
 
 .footer-line {
+  width: 80%;          /* try 70%–90% */
+  max-width: 900px;
+  margin: 24px auto;
   height: 1px;
-  background: #c8c800;
-  margin-bottom: 16px;
+  background: #ffffff;
+  opacity: 0.3;
 }
+
 
 .footer-grid {
   display: grid;
