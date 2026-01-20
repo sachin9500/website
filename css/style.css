@@ -314,16 +314,18 @@ footer a:hover {
   }
 }
 /* ==================================================
-   FINAL MOBILE SCROLL OVERRIDE (DO NOT REMOVE)
+   FINAL MOBILE SCROLL FIX (FLEX + HEIGHT RESET)
    ================================================== */
 
 @media (max-width: 768px) {
-  body {
-    overflow-y: auto !important;
-    overflow-x: hidden;
+
+  html, body {
+    height: auto !important;
   }
 
-  html {
-    height: auto;
+  body {
+    display: block !important;   /* 🔑 THIS IS CRITICAL */
+    overflow-y: auto !important;
+    overflow-x: hidden;
   }
 }
