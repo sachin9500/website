@@ -179,29 +179,41 @@ footer a:hover {
   text-decoration: underline;  /* optional hover */
 }
 /* ==================================================
-   MOBILE FIXES (SAFE OVERRIDES ONLY)
+/* ==================================================
+   FINAL MOBILE ALIGNMENT FIX
    ================================================== */
 
 @media (max-width: 768px) {
 
-  /* ✅ Restore scrolling on mobile ONLY */
-  body {
-    overflow-y: auto;
-  }
-
-  html, body {
-    height: auto;
-    min-height: 100vh;
-  }
-
-  /* ✅ Fix top nav overlap */
+  /* ---------- HEADER ---------- */
   .top-nav {
-    position: static;
+    position: relative;     /* stop overlap */
+    top: 0;
+    right: 0;
     text-align: right;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
 
-  /* ✅ Stack job cards vertically */
+  /* ---------- PAGE CONTAINERS ---------- */
+  .home,
+  .careers {
+    margin: 0 auto;
+    padding: 0 22px;        /* equal left/right padding */
+  }
+
+  /* ---------- TEXT BALANCE ---------- */
+  .content p {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---------- CAREERS TITLE ---------- */
+  .careers h2 {
+    text-align: center;
+  }
+
+  /* ---------- JOB CARDS ---------- */
   .jobs {
     flex-direction: column;
     align-items: center;
@@ -209,18 +221,22 @@ footer a:hover {
 
   .job-card {
     width: 100%;
-    max-width: 100%;
+    max-width: 360px;       /* visual balance */
   }
 
-  /* ✅ Improve text readability */
-  .content p {
-    font-size: 14px;
+  /* ---------- APPLY INTRO ---------- */
+  .apply-intro {
+    padding: 0 10px;
   }
 
-  /* ✅ Footer should stay inside screen */
+  /* ---------- FOOTER ---------- */
+  .footer-inner {
+    padding: 0 22px;
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 6px;
+    gap: 8px;
     text-align: center;
   }
 
