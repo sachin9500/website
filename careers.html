@@ -10,23 +10,33 @@
 
   <link rel="stylesheet" href="css/style.css">
 </head>
+<script>
+function toggleMenu() {
+  document.getElementById('menu').classList.toggle('open');
+}
+</script>
+
 <body>
 
 <div class="page">
 
   <!-- NAV -->
-  <nav class="top-nav">
-    <button class="menu-btn" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+<div class="top-nav">
+  <a href="index.html">Home</a>
+  <a href="careers.html">Careers</a>
 
-    <div class="menu">
-      <a href="index.html">Home</a>
-      <a href="careers.html">Careers</a>
-    </div>
-  </nav>
+  <div class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="careers.html">Careers</a>
+  </div>
+</div>
+
 
   <!-- MAIN -->
   <main class="careers">
