@@ -313,3 +313,17 @@ footer a:hover {
     line-height: 1.5;
   }
 }
+/* ==================================================
+   FINAL MOBILE SCROLL OVERRIDE (DO NOT REMOVE)
+   ================================================== */
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto !important;
+    overflow-x: hidden;
+  }
+
+  html {
+    height: auto;
+  }
+}
