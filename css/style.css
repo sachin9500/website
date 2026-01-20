@@ -8,10 +8,9 @@ body {
   background: #000;
   color: #fff;
   font-family: 'Inter', sans-serif;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* NO SCROLL */
+  margin: 0;
 }
+
 
 /* ---------- HEADER ---------- */
 .top-nav {
@@ -32,7 +31,6 @@ body {
   margin: auto;
   padding: 0 20px;
 }
-
 /* Brand */
 .brand {
   font-family: 'Alfa Slab One', serif;
@@ -47,10 +45,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-
-
-
 
 .tagline {
   font-family: 'Poppins', sans-serif;
@@ -73,7 +67,6 @@ body {
   margin-top: 10px;
   opacity: 0.95;
 }
-
 /* ---------- CAREERS ---------- */
 .careers {
   max-width: 1000px;
@@ -85,7 +78,6 @@ body {
   font-family: 'Telegraf', 'Inter', sans-serif;
   letter-spacing: 0.5px;
 }
-
 
 .section-line {
   height: 1px;
@@ -328,4 +320,11 @@ footer a:hover {
     overflow-y: auto !important;
     overflow-x: hidden;
   }
+}
+/* ---------- PAGE WRAPPER ---------- */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
