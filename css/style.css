@@ -166,19 +166,23 @@ body {
 .apply-btn {
   display: block;
   width: 100%;
-  margin-top: 12px;
+  max-width: 420px;
+  margin: 12px auto 0;
   padding: 12px 0;
   background: #ffffff;
   color: #000000;
   text-align: center;
   text-decoration: none;
   font-weight: 600;
-  cursor: pointer;
 }
 
-.apply-btn:hover {
-  opacity: 0.9;
+.apply-note {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.85;
+  text-align: center;
 }
+
 
 
 
