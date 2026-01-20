@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Careers | FasciCore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ <!-- Brand Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+  <!-- Existing Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<script>
+  document.getElementById("applyLink").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const role = document.getElementById("role").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !role || !message) {
+      alert("Please fill all fields before applying.");
+      return;
+    }
+
+    const subject = encodeURIComponent("Career Application – FasciCore");
+    const body = encodeURIComponent(
+      `Name: ${name}\n` +
+      `Email: ${email}\n` +
+      `Role: ${role}\n\n` +
+      `Introduction:\n${message}\n\n` +
+      `(Resume attached)`
+    );
+
+    this.href = `mailto:contact@fascicore.com?subject=${subject}&body=${body}`;
+    
+    // Trigger native navigation
+    window.location.href = this.href;
+  });
+</script>
+
+
+<body>
+
+<header class="top-nav">
+  <a href="index.html" class="nav-link">Home</a>
+</header>
+
+<main class="careers">
+  <h2>CAREERS AT FASCICORE</h2>
+  <div class="section-line"></div>
+
+  <div class="jobs">
+    <div class="job-card">
+      <h3>Principal Software Architect</h3>
+      <p>
+        We’re looking for a Principal Software Architect to define and own
+        the core architecture of our AI acceleration platform.
+      </p>
+      <p><strong>Experience:</strong> Systems software, compilers, runtimes</p>
+      <p><strong></strong> </p>
+    </div>
+
+    <div class="job-card">
+      <h3>System Software Engineer</h3>
+      <p>
+        Build and optimize core system components for our AI acceleration platform,
+        solving real performance and efficiency problems.
+      </p>
+      <p><strong>Experience:</strong> Systems programming, performance engineering</p>
+      <p><strong></strong> </p>
+    </div>
+  </div>
+<div class="apply-intro">
+  Interested in joining us? Share your resume and a short introduction to
+  <strong>Contact@fascicore.com</strong>
+</div>
+
+<section class="apply-section">
+  <h3></h3>
+
+  <div class="apply-form">
+    <input type="text" id="name" placeholder="Full Name" />
+    <input type="email" id="email" placeholder="Email Address" />
+    <input type="text" id="role" placeholder="Role you are applying for" />
+    <textarea id="message" placeholder="Short introduction (please attach your resume in the email)"></textarea>
+
+    <!-- REAL mailto anchor -->
+    <a href="#" id="applyLink" class="apply-btn">Apply</a>
+  </div>
+</section>
+
+
+
+
+<footer>
+  <div class="footer-line"></div>
+
+  <div class="footer-grid">
+    <div class="footer-left">
+      © 2026 FasciCore Labs. All rights reserved.
+    </div>
+
+    <div class="footer-center">
+      <a href="https://www.linkedin.com/company/fascicore" target="_blank">LinkedIn</a>
+      <a href="https://x.com/fascicore" target="_blank">X</a>
+    </div>
+
+    <div class="footer-right">
+      <a href="mailto:contact@fascicore.com">Contact@fascicore.com</a>
+      <span>Chennai, India</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
